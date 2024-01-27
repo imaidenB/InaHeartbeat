@@ -1,6 +1,6 @@
 Hey! Thanks for checking out my rinky-dink PICO-8 cartridge that is technically too big for PICO-8.
 
-> See also: [Sleep-Deprived Programmer Ramblings.md]
+See also: [Sleep-Deprived Programmer Ramblings](/Sleep-Deprived Programmer Ramblings.md)
 
 # Controls
 
