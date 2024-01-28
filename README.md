@@ -1,7 +1,9 @@
 Hey! Thanks for checking out my rinky-dink PICO-8 cartridge that is technically too big for PICO-8.
 
-See also: [Sleep-Deprived Programmer Ramblings](/Sleep-Deprived Programmer Ramblings.md)
+<details>
+  <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
 
+</details>
 # Controls
 
 The controls are fairly similar to the demo, with a few changes:
@@ -15,7 +17,8 @@ The controls are fairly similar to the demo, with a few changes:
 
 These buttons do nothing in any other context.
 
-Playing on Android requires connecting a controller via Bluetooth or USB.
+> [!IMPORTANT]
+> Playing on Android requires connecting a controller via Bluetooth or USB.
 
 # Info
 
@@ -50,12 +53,16 @@ It is also why me and Dan Salvato much, much prefer saying "DDLC" instead of "Do
   
   Run it to install the game as an app.
   
-  > Note: As *In a Heartbeat* is not from Google Play, you may need to grant permission for the `.apk` to install.
-> 
+> [!IMPORTANT]
+> As *In a Heartbeat* is not from Google Play, you may need to grant permission for the `.apk` to install.
+
 </details>
 <details>
   <summary>For 3DS</summary>
   
+> [!IMPORTANT]
+> Installing *In a Heartbeat* on a 3DS requires Luma3DS. For more information, visit [3DS Hacks Guide](https://3ds.hacks.guide).
+
   Scan this QR code using FBI's "Remote Install":
 
   Alternatively, you can grab `iah.cia` from the "Releases" tab and transfer it to your SD card.
