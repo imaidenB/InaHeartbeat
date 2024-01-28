@@ -63,19 +63,22 @@ Hey! Thanks for checking out my rinky-dink PICO-8 cartridge that is technically 
   In fact, it's basically a perfect visual novel engine, coded in a language that I'm **extremely** fluent in.
   
   So technically, *In a Heartbeat* is a *Doki Doki Literature Club!* mod. Only, it's coded in Lua instead of Ren'Py.
+
+  ---
   
 </details>
 
 # Controls
 
 The controls are fairly similar to the demo, with a few changes:
-|Mouse|Keyboard|Controller|Action|
-|-|-|-|-|
-|Left Click|Space/Enter|A||Dismiss dialogue, select menu item|
-|Right Click|H|B|Toggle UI visibility|
-|Middle Click|Esc|Start|Toggle quick menu, close pause menu
-|Scroll Wheel|Shift+Up/Down|B+D-Pad Up/Down|Scroll dialogue|
-|-|Arrows|D-Pad|Menuing|
+
+Mouse        | Keyboard      | Controller      | Action
+-------------|---------------|-----------------|------------------------------------
+Left Click   | Space/Enter   | A               | Dismiss dialogue, select menu item
+Right Click  | H             | B               | Toggle UI visibility
+Middle Click | Esc           | Start           | Toggle quick menu, close pause menu
+Scroll Wheel | Shift+Up/Down | B+D-Pad Up/Down | Scroll dialogue
+🖱️           | Arrows        | D-Pad           | Menuing
 
 These buttons do nothing in any other context.
 
@@ -86,14 +89,16 @@ These buttons do nothing in any other context.
 > [!NOTE]
 > For 3DS, the Bottom Screen **is** used for menuing.
 
-# Info
+# Key Info
+
+> [!IMPORTANT]
+> *In a Heartbeat* can only run on Windows, OSX, Android, and 3DS. Sorry, Linux and iOS users!
 
 Just like *Doki Doki Literature Club!*, *In a Heartbeat* isn't over until the credits are finished.
 
 Once you finish *In a Heartbeat*, you should totally check out [Bonus Content] if you don't yet have your *In a Heartbeat* fix. 😉
 
 ---
-
 Fun fact: In short, "doki-doki" is the sound of your heartbeat in Japanese. Yes, apparently thumping isn't international.
 > That's what she said.
 
@@ -101,7 +106,7 @@ This is where both *Doki Doki Literature Club!* and *In a Heartbeat* get their n
 It is also why me and Dan Salvato much, much prefer saying "DDLC" instead of "Doki Doki."
 
 # Installation
-## Computers
+## Windows/OSX
 Grab the latest release of *In a Heartbeat* for your operating system from the "Releases" tab.
 
 Simply extract the `.zip` to a folder located somewhere accessible, like your Desktop.
