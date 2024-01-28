@@ -92,7 +92,7 @@ These buttons do nothing in any other context.
 # Key Info
 
 > [!IMPORTANT]
-> *In a Heartbeat* can only run on Windows, OSX, Android, and 3DS. Sorry, Linux and iOS users!
+> *In a Heartbeat* can only run on Windows, OS X, Android, and 3DS. Sorry, Linux and iOS users!
 
 Just like *Doki Doki Literature Club!*, *In a Heartbeat* isn't over until the credits are finished.
 
