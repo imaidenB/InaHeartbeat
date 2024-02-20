@@ -72,22 +72,21 @@ Hey! Thanks for checking out my rinky-dink PICO-8 cartridge that is technically 
 
 The controls are fairly similar to the demo, with a few changes:
 
-Mouse        | Keyboard      | Controller      | Action
--------------|---------------|-----------------|------------------------------------
-Left Click   | Space/Enter   | A               | Dismiss dialogue, select menu item
-Right Click  | H             | B               | Toggle UI visibility
-Middle Click | Esc           | Start           | Toggle quick menu, close pause menu
-Scroll Wheel | Shift+Up/Down | B+D-Pad Up/Down | Scroll dialogue
-🖱️           | Arrows        | D-Pad           | Menuing
+Keyboard    | Controller    | Action
+------------|---------------|----------------------------------
+Space/Enter | A             | Dismiss dialogue, select choice
+H/Backspace | B             | Toggle UI visibility
+Escape/P    | Start         | Select option in/open PICO-8 menu
+Up/Down     | D-Pad Up/Down | Scroll dialogue history
+Arrows      | D-Pad         | Menuing
+Z/C/N       | A             | ❎ key in PICO-8 menu
+X/V/M       | B             | 🅾️ key in PICO-8 menu
 
 These buttons do nothing in any other context.
 
 > [!IMPORTANT]
 > Playing on Android requires connecting a controller via Bluetooth or USB.
 > *In a Heartbeat* does not have touchscreen support.
-
-> [!NOTE]
-> For 3DS, the Bottom Screen **is** used for menuing.
 
 # Key Info
 
@@ -103,7 +102,7 @@ Fun fact: In short, "doki-doki" is the sound of your heartbeat in Japanese. Yes,
 > That's what she said.
 
 This is where both *Doki Doki Literature Club!* and *In a Heartbeat* get their names.
-It is also why me and Dan Salvato much, much prefer saying "DDLC" instead of "Doki Doki."
+It is also why me and many others much, much prefer saying "DDLC" instead of "Doki Doki."
 
 # Installation
 ## Windows/OSX
