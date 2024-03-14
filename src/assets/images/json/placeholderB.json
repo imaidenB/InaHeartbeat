@@ -1,0 +1,23 @@
+{ "frames": [
+   {
+    "filename": "h-296x409-41x80-0x18-33x58",
+    "frame": { "x": 0, "y": 0, "w": 32, "h": 58 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 58 },
+    "sourceSize": { "w": 32, "h": 58 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "placeholderB",
+  "format": "I8",
+  "size": { "w": 32, "h": 58 },
+  "scale": "1",
+  "layers": [
+   { "name": "Flattened", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
