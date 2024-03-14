@@ -1,0 +1,98 @@
+{ "frames": [
+   {
+    "filename": "load 0.png",
+    "frame": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 42
+   },
+   {
+    "filename": "load 1.png",
+    "frame": { "x": 8, "y": 0, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 48
+   },
+   {
+    "filename": "load 2.png",
+    "frame": { "x": 16, "y": 0, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 48
+   },
+   {
+    "filename": "load 3.png",
+    "frame": { "x": 0, "y": 10, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 97
+   },
+   {
+    "filename": "load 4.png",
+    "frame": { "x": 8, "y": 10, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 48
+   },
+   {
+    "filename": "load 5.png",
+    "frame": { "x": 16, "y": 10, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 48
+   },
+   {
+    "filename": "load 6.png",
+    "frame": { "x": 0, "y": 20, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 48
+   },
+   {
+    "filename": "load 7.png",
+    "frame": { "x": 8, "y": 20, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 183
+   },
+   {
+    "filename": "load 8.png",
+    "frame": { "x": 16, "y": 20, "w": 8, "h": 10 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 10 },
+    "sourceSize": { "w": 8, "h": 10 },
+    "duration": 6
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "gui/load",
+  "format": "I8",
+  "size": { "w": 24, "h": 30 },
+  "scale": "1",
+  "frameTags": [
+    { "name": "load", "from": 0, "to": 8, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+Oh, my fucking... These ones, too?? At least with the others, I was 100% conscious...
+But now... I can't do anything. I can't see, feel, hear... It just... won't work. Nothing will!
+Please, Mom. Please come home soon. I'll miss Liam's party if this keeps up. He won't get my present!
+Please, someone! Anyone!
+Help!
+
+
+
+Please!!!
+stack traceback:
+	[string "-- pico-8 header..."]:431: in function 'scene'
+	[string "-- pico-8 header..."]:265: in function 'game_update'
+	[string "-- pico-8 header..."]:90: in function '_update60'
+	[string "-- pico-8 header..."]:488: in function '_mainloop'
+	[string "-- pico-8 header..."]:100: in main chunk

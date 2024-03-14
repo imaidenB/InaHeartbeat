@@ -1,0 +1,47 @@
+{ "frames": [
+   {
+    "filename": "dlgbox 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 128, "h": 29 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 29 },
+    "sourceSize": { "w": 128, "h": 29 },
+    "duration": 500
+   },
+   {
+    "filename": "dlgbox 1.ase",
+    "frame": { "x": 128, "y": 0, "w": 128, "h": 29 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 29 },
+    "sourceSize": { "w": 128, "h": 29 },
+    "duration": 500
+   },
+   {
+    "filename": "dlgbox 2.ase",
+    "frame": { "x": 256, "y": 0, "w": 128, "h": 29 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 29 },
+    "sourceSize": { "w": 128, "h": 29 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "gui/dlgbox",
+  "format": "I8",
+  "size": { "w": 384, "h": 29 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "ctcAlt", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "blank", "from": 1, "to": 1, "direction": "forward" },
+   { "name": "ctc", "from": 1, "to": 2, "direction": "reverse" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
