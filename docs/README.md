@@ -1,58 +1,97 @@
-# Modding Documentation
-## Definitions
-Here are some terms that appear in this guide that you might not know. These might not apply in a non-Lua or non-LÖVE context.
-### General
-Term          |Meaning
-----          |-----------------------------------------------------------------------------------------------------------------------------------
-FOSS          |**F**ree and **o**pen-**s**ource **s**oftware.
-File Directory|The proper term for a folder.
-Root Directory|The "top" directory which contains all other directories.
-File Path     |The directory "tree" that holds a file. `/a/b/c.txt` would refer to the file `c.txt` inside of folder `/b/` inside of folder `/a/`.
-Function      |A chunk of code that can be run at any point. They usually also take arguments.
-Argument      |Pieces of data that can change what a function does or how it does it.
-Variable      |A stored piece of data that can be changed or accessed or changed at any time.
-### *In a Heartbeat*-specific
-Term      |Meaning
-----------|-----------------------------------------------------------------------------------------------
-Chapter   |A `.lua` file containing a tree of `elseif` statements and instructions
-Pointer   |The player's progress in the story, stored in the variable `ptr`.
-Background|An image representing a scene's location.
-Portrait  |An image of a character, composed of a head, a left half, and a right half.
-CG        |**C**haracter **g**raphic. A scene that doesn't follow the usual portrait-on-background format.
-State     |The behavior to follow depending on what is currently happening in-game. 
+# *In a Heartbeat* Mod Guide
+This acts as a guide on creating visual novels using Ren'P8-LOVE, a modified version of DDLC-LOVE's engine.
 
+Click the "Menu" button in the top-left to jump to sections.
 
-## Getting Started
-To get started with modding *In a Heartbeat*, you will need the following:
-Item        |Purpose
-------------|------------------------
-Mod Template|Template
-LÖVE        |Running your mod
-VSCodium    |Editing `.lua` files
-<details><summary>More info on LÖVE</summary>
-LÖVE is a 2D game engine that uses Lua. It is FOSS, and can run on many different platforms.
-</details>
-<details><summary>More info on VSCodium</summary>
-VSCodium is a FOSS fork of Visual Studio Code, a programming-focused text editor with support for almost every text-based programming language.
-The original is from Microsoft and contains required telemetry.
+# Getting started
+Before you begin, you will need the following:
+- [LÖVE](https://love2d.org/)
+- *IaH* Mod Template
+- VSCodium \(for writing and coding\)
+
+These are optional, but can help a lot:
+- LibreSprite \(for art\)
+- Audacity \(for sound editing\)
+- *IaH* source code \(for reference\)
+> [!IMPORTANT]
+Inside the mod template, open `conf.lua` and change `t.identity` to the name of your mod.
+This prevents your mod's save data from conflicting with other mods or the base game.
+
+To test your mod, you can:
+- compress the folder to a `.zip` file, rename it to a `.love` file, and launch it
+- drag-and-drop the folder on top of `love.exe` \(Windows\) or `love.app` \(OS X\)
+> [!TIP]
+> If you're using Windows, you can also create a shortcut to `love.exe` and place it somewhere easily accessible
+> \(i.e. the same location as your mod folder\), and drag-and-drop the folder onto it instead of `love.exe`.
+
+# Chapters
+Ren'P8-LOVE games revolve around chapters. A chapter is a `.lua` file containing a giant `elseif` tree with instructions.
+
+Here is an example of a short Ren'P8-LOVE chapter:
+<details>
+  <summary>Click to reveal</summary>
+
+```lua
+function ch0script()
+  if ptr==0 then
+    music"bell"
+    pause(5)
+  elseif ptr==1 then
+    b"The bell at Skyline High School has just rung, and I am taking my time with leaving."
+  elseif ptr==2 then
+    b"Unlike literally everyone else..."
+  elseif ptr==3 then
+    b"Sometimes I wonder if I'm the only one with any patience..."
+  elseif ptr==4 then
+    bg"skyline_ext"
+    updA('a','1','2')
+    a"Hey!"
+  elseif ptr==5 then
+    updA('b','2','2')
+    b"I see a guy older than me running up to me."
+  elseif ptr==6 then
+    b"He is Aiden, a 16-year-old senior who I've known for just over two years."
+  elseif ptr==7 then
+    b"We're not as much of friends as we were, say, a year ago, but we still regularly chat through Discord."
+  elseif ptr==8 then
+    p"What's up?"
+  elseif ptr==9 then
+    a"Are you gonna be online?"
+  elseif ptr==10 then
+    a"I really want to play on the server with you and Liam."
+  elseif ptr==11 then
+    a"There's something I want to build, and I'm gonna need help."
+  elseif ptr==12 then
+    b"Liam... Another freshman who I've known for longer than I can remember."
+  elseif ptr==13 then
+    b"I can't believe we're still friends to this day."
+  elseif ptr==14 then
+    p"I should be. I'll DM you when I'm free."
+  elseif ptr==15 then
+    updA('c','2','2')
+    a"Sweet! See you later, then."
+  elseif ptr==16 then
+    hideA()
+    p"Yeah..."
+  elseif ptr==17 then
+    b"What kind of monstrosity does he have planned this time?"
+  end
+end
+```
 </details>
 
----
-The following are not *strictly* necessary, but might help a lot:
+# Finalizing your mod
+> [!IMPORTANT]
+> Before you export your mod, open `main.lua` and, near the top, change `test` to `false`.
+> This prevents users from using developer tools.
 
-Item       |Purpose
--------------|-----------------------------------------
-Audacity     |Trimming audio for looping
-LibreSprite  |Viewing and editing `.ase` images/animations
-love-launcher|Easily launching LÖVE
-<details><summary>More info on Audacity</summary>
-Audacity is a FOSS audio editor. It supports dozens of file formats, and makes converting between them easy. 
-</details>
-<details><summary>More info on LibreSprite</summary>
-LibreSprite is a FOSS fork of Aseprite, a pixel art-focused image editor. The original is far more feature-packed, and I highly encourage you to purchase it if you like LibreSprite and US$15 to spend.
-</details>
-<details><summary>More info on love-launcher</summary>
-love-launcher is a Visual Studio Code extension that lets you launch an opened folder in LÖVE instead of having to compress it to a .love file or messing with command line parameters.
-</details>
+Once you're finished making your mod, you have a couple of ways to export it.
 
----
+## Export as .love
+Compress your mod folder to a `.zip` file, and rename it to a `.love` file.
+Anyone who has LÖVE installed can run this file on Windows, OS X, Linux, and Android.
+> [!NOTE]
+> Just like vanilla *IaH*, the mod will only work on Android if the user has a controller connected.
+
+## Export as standalone app
+Follow the instructions at [the Game Distribution wiki article](https://love2d.org/wiki/Game_Distribution) for your operating system.
