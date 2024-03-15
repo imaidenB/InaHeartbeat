@@ -106,10 +106,10 @@ end
 ---Prompt the player to make a choice.
 ---
 ---The chosen string is stored in `choice`.
----@param t string[] The choices to offer.
+---@param t string[]|string The choice(s) to offer.
 function choose(t)
 	if state ~= "pause" then
-        items = t
+        items = type(t) == "string" and {t} or t
 		choosing = true
 		autotimer = 0
 		autoskip = -1
@@ -123,6 +123,7 @@ function cartSpin()
 		hideAll()
 		music ''
 		b ''
+		if ptr == 803 then immediatetext:send "{warp=2}> " end
 	end
 	gui.cartSpin:update(dt)
 end

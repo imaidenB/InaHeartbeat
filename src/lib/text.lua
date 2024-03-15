@@ -938,7 +938,7 @@ M.command_table = {
   --[[ Fake Bold ]] ------------------------------------------------------------
   ["b"] = function(self)
     self.effect_flags.dropshadow = 10
-    self.current_color = {0.76078431372549, 0.76470588235294, 0.78039215686275}
+    self.current_color = {1, .94509803921569, .90980392156863}
   end,
 
   --[[ Turn off Fake Bold ]] ---------------------------------------------------

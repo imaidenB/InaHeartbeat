@@ -126,8 +126,8 @@ function ch2script()
         wait(7.7499, true)
     elseif ptr == 495 then
         if xaload == 0 then
-            createDirectory(p8Dir)
-            write(p8Dir.."/traceback.p8l", love.filesystem.read "scripts/writables/traceback.p8l")
+            createDirectory "appdata/InaHeartbeat"
+            write("appdata/InaHeartbeat/traceback.p8l", love.filesystem.read "scripts/writables/traceback.p8l")
             dlgtext.current_shadow_color = {.16078431372549, .094117647058824, .07843137254902, 1}
             useAltCtc = true
         elseif xaload == 360 then

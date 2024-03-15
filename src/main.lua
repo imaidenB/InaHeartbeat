@@ -32,6 +32,13 @@ test = true
 ---@type "Windows"|"OS X"|"Android"|"3DS"
 g_system = love._console_name or love.system.getOS()
 
+-- Make sure that random is random.
+love.math.setRandomSeed(os.time())
+math.randomseed(os.time())
+love.math.random()
+love.math.random()
+love.math.random()
+
 -- log require()s
 local _require = require
 function require(modname)
@@ -84,6 +91,7 @@ if g_system == "3DS" or g_system == "Android" then
 	createDirectory = love.filesystem.createDirectory
 	fileload = love.filesystem.load
 	getInfo = love.filesystem.getInfo
+	getWorkingDirectory = love.filesystem.getWorkingDirectory
 	p8Dir = ''
 else
 	nativefs = require "lib/nativefs"
@@ -93,6 +101,7 @@ else
 	createDirectory = nativefs.createDirectory
 	fileload = nativefs.load
 	getInfo = nativefs.getInfo
+	getWorkingDirectory = nativefs.getWorkingDirectory
 	p8Dir = "appdata/InaHeartbeat"
 end
 require "loader/portraits" -- Portrait updating and drawing
@@ -141,6 +150,7 @@ function love.load()
 	paused = false
 	dlg_enabled = true -- Whether or not the dialogue box can be drawn.
 	history = {} -- The dialogue history
+	ver = 0.2 -- Development version
 
 	love.window.setTitle "InaHeartbeat" -- PICO-8 exported binaries use the cart title during boot
 
@@ -149,13 +159,12 @@ end
 
 function love.draw()
 	gscreen.start()
-	if state == "load" then bootAnim:draw()
+	if state == "load" or state == "error" then bootAnim:draw()
 	elseif state == "splash" or state == "splash2" or state == "title" then splash_draw()
 	elseif state == "game" then game_draw()
 	elseif state == "pause" then pause_draw()
 	elseif state == "cartswap" then gui.cartSpin:draw()
 	elseif state == "credits" then credits_draw()
-	elseif state == "error" then bootAnim:draw()
 	end
 	gscreen.stop()
 end

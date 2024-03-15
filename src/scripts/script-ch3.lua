@@ -250,74 +250,86 @@ function ch3script()
     elseif ptr == 801 then
         if xaload == 0 then
             dlg_enabled = false
+            bg "end_error"
             local text = "COULD NOT #INCLUDE FILE:\n{col=#FF77A8}DRAW.LUA"
             immediatetext:send(text, 128, true)
-            chapter = 4
             savegame()
         end
         wait(10)
     elseif ptr == 802 then
         -- The whole immediate mode scene is just one huge text:send() call with waits and warps.
         if xaload == 0 then
+            savegame()
             -- immediateCursor:send('', 8, true)
             immediate_y = 0
             local text = [[{warp=39}COULD NOT #INCLUDE FILE:
 {col=#FF77A8}DRAW.LUA
-{/col}> {w=1}?PTR{w=.2}{warp=11}
+{/col}{function=love.window.setTitle"6.P8 (PICO-8)"}> {w=1}?PTR{w=.2}{warp=13}
 {col=#C2C3C7}[NIL]
-{/col}> {w=1.25}?CHAPTER{w=.2}{warp=11}
+{/col}> {w=1.25}?CHAPTER{w=.2}{warp=13}
 {col=#C2C3C7}[NIL]
-{/col}> {w=1.25}INFO{w=.2}{warp=59}
+{/col}> {w=1.25}INFO{w=.2}{warp=63}
 {col=#FF77A8}FILE: 6.P8
 {col=#C2C3C7}COULD NOT #INCLUDE FILE:
 {col=#FF77A8}STATES/GAME.LUA
-{/col}> {w=1.75}LS{w=.2}{warp=51}
+{/col}> {w=1.75}LS{w=.2}{warp=54}
 {col=#29ADFF}DIRECTORY: /
 {col=#FF77A8}SCRIPTS
 STATES
 {col=#C2C3C7}REN.P8
 IAH.P8
-{/col}> {w=1.5}CD STATES{w=.2}{warp=14}
+{/col}> {w=1.5}CD STATES{w=.2}{warp=16}
 {col=#29ADFF}/STATES/
-{/col}> {w=.75}LS{w=.2}{function=immediate_y=immediate_y-12}{warp=35}
+{/col}> {w=.75}LS{w=.2}{function=immediate_y=immediate_y-12}{warp=38}
 {col=#29ADFF}DIRECTORY: /STATES/
 {col=#C2C3C7}LOAD.LUA
-{/col}> {w=.75}CD ../SCRIPTS{w=.2}{function=immediate_y=immediate_y-12}{warp=11}
+{/col}> {w=.75}CD ../SCRIPTS{w=.2}{function=immediate_y=immediate_y-12}{warp=18} 
 {col=#29ADFF}/SCRIPTS/
-{/col}> {w=.5}LS{w=.2}{function=immediate_y=immediate_y-30}{warp=45}
+{/col}> {w=.5}LS{w=.2}{function=immediate_y=immediate_y-30}{warp=47}
 {col=#29ADFF}DIRECTORY: /SCRIPTS/
 {col=#C2C3C7}6.P8
 7.P8
 SA.P8
-{/col}> {w=1.75}LOAD 7{w=.2}{function=immediate_y=immediate_y-12}{warp=31}
-LOADED 7.P8 (16239 CHARS)
-> INFO{w=.2}{function=immediate_y=immediate_y-24}{warp=50}
+{/col}> {w=1.75}LOAD 7{w=.2}{function=immediate_y=immediate_y-12;love.window.setTitle"7.P8 (PICO-8)"}{warp=31}
+{col=#C2C3C7}LOADED 7.P8 (16239 CHARS)
+{/col}> INFO{w=.2}{function=immediate_y=immediate_y-24}{warp=53}
 {col=#FF77A8}FILE: 7.P8
 {col=#C2C3C7}COULD NOT #INCLUDE FILE:
 {col=#FF77A8}REN.P8
-{/col}> {w=1}LOAD SA{w=.2}{function=immediate_y=immediate_y-12}{warp=32}
-LOADED SA.P8 (13004 CHARS)
-> {w=.5}INFO{w=.2}{function=immediate_y=immediate_y-30}{warp=98}
+{/col}> {w=1}LOAD SA{w=.2}{function=immediate_y=immediate_y-12;love.window.setTitle"SA.P8 (PICO-8)"}{warp=34}
+{col=#C2C3C7}LOADED SA.P8 (13004 CHARS)
+{/col}> {w=.5}INFO{w=.2}{function=immediate_y=immediate_y-30}{warp=97}
 {col=#FF77A8}FILE: SA.P8
 {/col}TOKENS:      1025 /  8192
 CHARS:      13004 / 65535
 COMPRESSED:  7023 / 15616
-> {w=.75}RUN{w=.2}{function=changeState "credits"}]]
+> {w=.75}RUN{w=.2}{function=changeState"credits"}]]
             immediatetext:send(text, 128)
+            immediateCursor:send("{col=#FF004D}{blink=4}▮", 8, true)
         end
         immediatetext:update(dt)
+        immediateCursor:update(dt)
     elseif ptr == 803 then
         if xaload == 0 then
+            immediate_y = 0
             if g_system == "Windows" or g_system == "OS X" then
                 immediatetext:send([[{warp=2}> {w=.2}F=#INCLUDE README.LUA{w=.2}{warp=3}
-> {w=.2}PRINTH(F,'README.TXT',TRUE){w=.2}{function=love.filesystem.write(love.filesystem.read "scripts/writables/readme.txt", "appdata/InaHeartbeat/readme.txt")}{warp=3}
-> {w=.2}EXTCMD'FOLDER'{w=.2}{function=love.system.openURL "file://appdata/InaHeartbeat"}{warp=3}
-> {w=.2}{function=cartSpin()}]], 128)
-            else immediatetext:send([[> F=#INCLUDE README.LUA
-> #INCLUDE{w=.75}634{w=.5}121{w=.75}
+> {w=.2}PRINTH(F,'README.TXT',TRUE){w=.2}{function=write("appdata/InaHeartbeat/readme.txt",love.filesystem.read"scripts/writables/readme.txt")}{warp=3}
+> {w=.2}EXTCMD'FOLDER'{w=.2}{function=love.system.openURL("file://"..getWorkingDirectory().."/appdata/InaHeartbeat")}{warp=3}
+> {w=.5}]], 128)
+            else immediatetext:send([[> F=#INCLUDE README.LUA{w=.2}{warp=3}
+> #INCLUDE #{w=.75}634{w=.5}121{w=.75}{warp=3}
 > POEM{F,0,FALSE}]], 128)
             end
+            immediateCursor:send("{col=#FF004D}{blink=2}▮", 8, true)
         end
         immediatetext:update(dt)
+        immediateCursor:update(dt)
+        if immediatetext:is_finished() then cartSpin() end
+    elseif ptr == 804 and chapter == 4 then
+        bg "credits_error"
+        love.window.setTitle "InaHeartbeat"
+        chapter = 5
+        savegame()
     end
 end

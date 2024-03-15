@@ -1,4 +1,4 @@
-	Dear Spencer,
+[[	Dear Spencer,
 
 	I don't know how long I have to say this.
 My world could literally start deteriorating at any moment.
@@ -80,4 +80,4 @@ And it... kinda worked. Until it started deleting chapters that you HADN'T yet s
 I practically TELEPORTED in here when I saw you go *poof*. I knew something was going on with the game. And I was right!
 So that was me typing those commands. Ehehe~
 
-okay bye! still alive is almost done so i have to REALLY hurry and send this to you before the game completely shits itself~
+okay bye! still alive is almost done so i have to REALLY hurry and send this to you before the game completely shits itself~]]
