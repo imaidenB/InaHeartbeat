@@ -1,7 +1,8 @@
 local skipspeed = 10 -- How fast autoskip dismisses text
 local dlg_visible = true -- Whether or not the dialogue box hasn't been hidden with B or backspace
 local sel = 1 -- The currently selected choice from choose()
-local ix, iy = 0, 0 -- The location of the cursor in the "immediate mode" at the end of chapter 4
+local ix, iy = 0, 0 -- The location of the cursor in the "immediate mode" at the end of the game.
+local indicator = lg.newImg "gui/a" -- The A button shown next to the disclaimer agreement button.
 
 function game_draw()
 	lg.setBackgroundColor(0,0,0)
@@ -10,7 +11,7 @@ function game_draw()
 	-- If there's currently a background, draw it with peachy:draw if we're in a CG, or lg.draw if not.
 	if background:sub(1, 3) == "cg/" then
 		if bgImg ~= blankPeachy then bgImg:draw() end
-	elseif bgImg ~= blankImg then lg.draw(bgImg)
+	elseif bgImg ~= blankImg and not bgImg.draw then lg.draw(bgImg, 0, immediate_y or 0)
 	end
 	drawAll() -- Draw all portraits.
 	
@@ -34,6 +35,11 @@ function game_draw()
 	if choosing  and dlg_visible then
 		local y = 54 - #items*5 -- Y of first button
 		for i, v in ipairs(items) do
+			local useIndicator = false
+			if v == '' then
+				v = "I agree."
+				useIndicator = true
+			end
 			local x = 62 - v:len()*2 -- X of current button
 			local w = 4 + v:len()*4 -- Width of current button
 			-- If this is the currently selected button, draw the hovered button.
@@ -41,16 +47,18 @@ function game_draw()
 			if sel == i then gui.button_hover:draw(x, y, w, 10)
 			else gui.button:draw(x, y, w, 10)
 			end
+			if useIndicator then lg.draw(indicator, x+w, y+1) end
 			lg.oprint(v, x+2, y+2, 7)
 			y = y+10 -- Increase y for the next button
 		end
 	end
 	-- If the cartswap animation is playing, draw it.
 	if not gui.cartSpin.paused then gui.cartSpin:draw(4, 4) end
-	if ptr < 800 then return end
+	if ptr < 800 or ptr == 804 then return end
 	-- Draw the immediate mode history and store the location of the cursor.
+	if ptr == 803 then credits_draw() end
 	ix, iy = immediatetext:draw(0, immediate_y or 0)
-	if ix and iy then immediateCursor:draw(ix, iy) end
+	if ix and iy then immediateCursor:draw(ix-4, immediate_y == 0 and iy-5 or 114) end
 end
 
 function game_update()
@@ -84,10 +92,11 @@ function game_update()
 			ptr = ptr+1 -- Increment ptr.
 			xaload = 0 -- Reset xaload so we know the next scriptCheck call is the first.
 			collectgarbage() -- I guess garbage collection is important in LÖVE?
-			collectgarbage() -- idk, neither PICO-8 nor Luau use it so~
+			collectgarbage() -- idk, neither PICO-8 nor Luau use it, but DDLC-LOVE does so~
 			autoskip = 1 -- Reset the skip timer.
 		end
 	end
+	if ptr == 803 then credits_update() end
 end
 
 function game_keypressed(key)
@@ -96,7 +105,7 @@ function game_keypressed(key)
 		elseif key == "down" then sel = sel+1
 		elseif key == "left" then sel = 1
 		elseif key == "right" then sel = #items
-		elseif key == 'a' then
+		elseif key == 'a' and dlg_enabled then
 			choice = items[sel]
 			choosing = false
 			autotimer = 0
@@ -105,6 +114,7 @@ function game_keypressed(key)
 			unitimer = 0
 		end
 		sel = math.max(1, math.min(sel, #items))
+	elseif ptr == 804 then love.event.quit()
 	end
 	if key == "start" then --quick menu
 		autotimer = 0

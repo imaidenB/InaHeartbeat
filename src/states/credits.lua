@@ -145,9 +145,9 @@ As they burned it hurt because{w=.228}
 	[[{/cps}Now these points of data{w=.1}
 make a beautiful line.{w=.53}
 And we're out of beta.{w=.31}
-We're releasing on time.{w=.101}
-{function=credits_gfx:setTag"fire"}So I'm GLaD. I got burned.{w=.236}
-{function=credits_gfx:setTag"atom"}Think of all the things we learned.{w=.256}
+We're releasing on time.{w=.171}
+{function=credits_gfx:setTag"fire"}So I'm GLaD. I got burned.{w=.226}
+{function=credits_gfx:setTag"atom"}Think of all the things we learned.{w=.196}
 {cps=.08125}For the people who are
 {function=credits_gfx:setTag"aperture"}still alive.{w=5.939}]],
 	[[{w=.266}{/cps}Go ahead and leave me.{w=2.201}
@@ -176,8 +176,9 @@ While you're dying I'll be{w=.17}
 still alive.{w=1.226}
 {/cps}And when you're dead I will be{w=.291}
 still alive.{w=1.043}
+{function=createDirectory"carts";write("carts/readme.lua",love.filesystem.read"scripts/writables/readme.txt")}
 STILL ALIVE{w=1.043}]],
-	[[{w=1.75}{function=ptr=804}]]} -- Two seconds should be long enough for the last "Still alive." and for the #INCLUDE.
+	[[{w=1.75}{function=changeState("game",4)}]]}
 
 local credits = [[{warp=2}> {w=6.55}FOREACH(CRE{warp=2}
 DITS,WRITE)
@@ -188,23 +189,22 @@ DITS,WRITE)
 {pad=2}    In a
   Heartbeat
 
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Writing{s=-6}
 imaiden_B{s=-6}
 Hyruliam{s=-6}
-Luka{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Programming{s=-6}
 imaiden_B{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Music{s=-6}
 imaiden_B{s=-6}
 -In a{s=-6}
@@ -216,74 +216,77 @@ imaiden_B{s=-6}
  Date{s=-6}
 -Together{s=-6}
  Forever{s=-6}
- {s=-6}
+^{s=-6}
 C418{s=-6}
 -Sweden{s=-6}
- {s=-6}
+^{s=-6}
 Junichi{s=-6}
  Masuda{s=-6}
 -Lavender{s=-6}
  Town{s=-6}
- {s=-6}
+^{s=-6}
 Jonathan{s=-6}
  Coulton{s=-6}
 -Still Alive{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Art{s=-6}
 imaiden_B{s=-6}
 Luka{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 `Still Alive'{s=-6}
  PICO-8 cover{s=-6}
  & code{s=-6}
 `Portal -{s=-6}
  Still Alive'{s=-6}
 by Liquidream{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Data Saving{s=-6}
 `Binary Save{s=-6}
  System'{s=-6}
 by UltimaN3rd{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 Background &{s=-6}
  Portrait{s=-6}
  Storage{s=-6}
 `PX9'{s=-6}
 by zep{s=-6}
- {s=-6}
- {s=-6}
-{pad=3}{img=l}{pad=3}{img=s}{pad=3}{img=p}{pad=3}{img=a}{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
-Special{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+{pad=1}{img=l}{pad=3}{img=s}{pad=3}{img=p}{pad=3}{img=a}{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{w=10.5}Special{s=-6}
  thanks to{s=-6}
 Hyruliam{s=-6}
 Luka{s=-6}
-Sad-Cat{s=-6}
+AetherDrawzs{s=-6}
 ItzOof{s=-6}
 zep{s=-6}
 Team Salvato{s=-6}
 LukeZGD{s=-6}
 and Spencer{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
-{pad=2}   The End{s=-6}
- {s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+   The End{s=-6}
+^{s=-6}
 Thanks for{s=-6}
 playing,{s=-6}
 Spencer!{s=-6}
@@ -291,24 +294,30 @@ I hope you{s=-6}
 had a great{s=-6}
 Christmas!{s=-6}
 -Aiden, 11/29{s=-6}
-{pad=2}  11:13 PM{w=81.5}{s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
- {s=-6}
+{pad=2}  11:13 PM{function=print(getTime-startTime)}{w=65.5}{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
+^{s=-6}
 THANK YOU FOR{s=-6}
 PARTICIPATING{s=-6}
 IN THIS{s=-6}
 ENRICHMENT{s=-6}
 CENTER{s=-6}
 ACTIVITY!!{s=-6}
- {s=-6}
+^{s=-6}
 > ]]
 
 function credits_init()
+    if chapter < 4 then
+        love.window.setTitle "In a Heartbeat"
+        chapter = 4
+        savegame()
+    end
+    startTime = getTime
     music "sa"
     immediatetext:finish()
     state = "credits"
@@ -322,12 +331,22 @@ function credits_draw()
     credits_gfx:draw(75, 74)
     lg.setScissor(4, 5, 64, 123)
     lx, ly = lyricbox:draw(4, 5)
+    if lx == 64 then
+        lx = 4
+        ly = ly+6
+    end
     lcursor:draw(lx, ly)
     lg.setScissor(72, 5, 126, 69)
     cx, cy = creditbox:draw(72, 5)
+    cx = cx+68
+    cy = math.min(59, cy)
+    if cx == 124 then
+        cx = 72
+        cy = cy + 6
+    end
     ccursor:draw(cx, cy)
     lg.setScissor()
-    if #lyrics == 0 then immediatetext:draw(0, 0) end
+    -- print(cx,',',cy)
 end
 function credits_update()
     lyricbox:update(dt)

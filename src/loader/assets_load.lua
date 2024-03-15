@@ -12,9 +12,9 @@ function loader_assets(l_timer)
         love.audio.play(lanewSrc "sfx/boot")
         bgImg = blankImg
         background = "blank"
-        p8sciiFont = lg.newImageFont("assets/fonts/p8scii.png","é !\"%&'*,-./0123456789:>?abcdefghijklmnopqrstuvwxyz_`ABCDEFGHIJKLMNOPRSTUVWY~✽½♥☉", 1)
+        p8sciiFont = lg.newImageFont("assets/fonts/p8scii.png","é !\"%&'()*,-./0123456789:>?abcdefghijklmnopqrstuvwxyz\\_`ABCDEFGHIJKLMNOPRSTUVWXYZ~✽½♥☉", 1)
         mojanglesFont = lg.newImageFont("assets/fonts/mojangles.png"," \"'+,-./012379:<>?abcdefghijklmnopqrstuvwxyz_`ABCDEFGHIJLNORSTUWYZ", 1)
-        immediateFont = lg.newImageFont("assets/fonts/immediate.png","▮ #()'./0123456789:>?ceilmnps[]_ABCDEFGHIJKLMNOPRSTUWY")
+        immediateFont = lg.newImageFont("assets/fonts/immediate.png","▮ #'(),./0123456789:=>?ceilmnps[]_ABCDEFGHIJKLMNOPRSTUWXY")
         menuFont = lg.newImageFont("assets/fonts/menu.png","▮▶□ -:abcdefghiklmnopqrstuvwy_")
         lg.setFont(p8sciiFont)
         
@@ -51,10 +51,9 @@ function loader_assets(l_timer)
             color = {1, .94509803921569, .90980392156863, 1},
             font = immediateFont,
             adjust_line_height = -2,
-            print_speed = .1
+            print_speed = .125
         })
         immediateCursor = text.new("left", {
-            autotags = "{blink=.8}▮",
             font = immediateFont
         })
         minecrafttext = text.new("left", {
@@ -71,7 +70,7 @@ function loader_assets(l_timer)
             elseif chapter == 3 then
                 ptr = ptr+1
                 xaload = -1
-            elseif chapter == 4 then changeState "error"
+            else ptr = 804
             end
         end, gui.cartSpin)
         gui.cartSpin:pause()

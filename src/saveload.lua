@@ -1,5 +1,5 @@
 --default persistent values
-ptr = 0 -- How many instructions the player has gone through in their save file
+ptr = -11 -- How many instructions the player has gone through in their save file
 chapter = 0 -- Which script file to call
 bgTag = '' -- Which tag of `background`.ase to use
 background = "black" -- Which .ase file to use for the background
@@ -40,8 +40,5 @@ end
 
 function loadgame()
 	pcall(fileload "cdata/imaidenb_heartbeat_1.p8d.txt")
-	if chapter == 4 then changeState "credits"
-	elseif chapter == 5 then changeState "error"
-	else changeState("game", chapter)
-	end
+	print "loaded save"
 end

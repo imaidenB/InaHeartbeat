@@ -556,4 +556,34 @@ function ch0script()
         b "Almost {b}too{/b} understanding..."
     elseif ptr > 224 then cartSpin()
     end
+
+    -- Disclaimer
+    if ptr == -11 then
+        bg("cg/splash", 2)
+        b "This game is not recommended for children or sensitive individuals."
+    elseif ptr == -10 then
+        b "Those who are {b}at all{/b} sensitive to the following should take caution playing:"
+    elseif ptr == -9 then
+        b "Abuse"
+    elseif ptr == -8 then
+        b "Rape"
+    elseif ptr == -7 then
+        b "Suicide"
+    elseif ptr == -6 then
+        b "Alcohol"
+    elseif ptr == -5 then
+        b "In addition, {b}major{/b} spoilers for Doki Doki Literature Club! are present throughout."
+    elseif ptr == -4 then
+        b "If you have not beaten it before, {b}please{/b} do so before playing In a Heartbeat."
+    elseif ptr == -3 then
+        choose '' -- ('') is a special parameter that displays "I agree." with a button indicator.
+        b "By playing In a Heartbeat, you agree that you are over 12 y/o, and that you consent to exposure to the above content."
+    elseif ptr == -2 then
+        tag(1)
+        wait(1.5)
+    elseif ptr == -1 then
+        ptr = 0
+        savegame()
+        changeState "splash"
+    end
 end
