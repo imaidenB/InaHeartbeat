@@ -1,9 +1,5 @@
 A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after [PICO-8](https://www.lexaloffle.com/pico-8.php).
 
-> [!CAUTION]
-If you are sensitive to child abuse, consider not playing.
-Detailed content warnings are available in-game.
-
 <details>
   <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
   
