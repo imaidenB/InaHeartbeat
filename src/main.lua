@@ -25,7 +25,7 @@
 
 
 -- Enables printing to lovebird at http://127.0.0.1:8000/ and incrementing/decrementing ptr with right and left.
-test = true
+test = false
 
 ---The operating system running the game.
 ---Used for file saving and platform-specific features.
@@ -166,6 +166,8 @@ function love.draw()
 	elseif state == "cartswap" then gui.cartSpin:draw()
 	elseif state == "credits" then credits_draw()
 	end
+	-- If we're in test mode, print the current ptr at the top of the screen.
+	if test then lg.oprint(ptr, 64 - string.len(ptr)*2, dlgTop and 122 or 1, 7, 0) end
 	gscreen.stop()
 end
 

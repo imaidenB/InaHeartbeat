@@ -52,7 +52,7 @@ function s(text) dlg("Sarah", text) end -- Create dialogue from Sarah.
 function l(text) dlg("Liam", text) end -- Create dialogue from Liam.
 
 function mcdlg(name, text)
-	if text == lastDlg and name == ct then return end
+	if text == lastDlg then return end
 	
 	lastDlg = text
 	ct = name
@@ -61,14 +61,15 @@ function mcdlg(name, text)
 	else mc_enabled = true
 	end
 	
-	local temptext = ct..': '..text
+	local histtext = ct..': '..text
 	if ct == '' then histtext = text end
 	table.insert(history, #history+1, histtext)
 	
-	if history[5] == text or history[5] == temptext then error("Script issue detected at: "..ptr..'\n'..history[3])end
+	-- DDLC-LOVE moment
+	if history[5] == text or history[5] == histtext then error("Script issue detected at: "..ptr..'\n'..history[3]) end
     
 	if name ~= '' then text = '<'..name.."> "..text end
-	print(name)
+	print(text)
 
 	minecrafttext:send(text, 126, true)
 end

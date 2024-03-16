@@ -142,7 +142,7 @@ function ch1script()
         updL('a', 21)
         l "And to answer your question, I like to play video games and draw."
     elseif ptr == 281 then
-        updS('i', "1c")
+        updS('a', "1c")
         s "Oh, my gosh, same~!"
     elseif ptr == 282 then
         updL('f', 21)
@@ -211,7 +211,7 @@ function ch1script()
     elseif ptr == 306 then
         l "Did you try using the joystick?"
     elseif ptr == 307 then
-        updS('h', "1c")
+        updS('i', "1c")
         s "`Joystick?'"
     elseif ptr == 308 then
         l "Yeah. You should've gotten a pop-up with other controls."
@@ -224,13 +224,13 @@ function ch1script()
     elseif ptr == 311 then
         l "You must've played just before they added them."
     elseif ptr == 312 then
-        updS('d', 1)
+        updS('i', "1c")
         s "Well... I hope I still own it on Google Play."
     elseif ptr == 313 then
-        updS('i', "1c")
+        updS('d', "1c")
         s "I'm due for my axolotl fix!"
     elseif ptr == 314 then
-        updS('k', "1c")
+        updS('b', "1c")
         s "Ahaha!"
     elseif ptr == 315 then
         music "bell"

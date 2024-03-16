@@ -360,7 +360,7 @@ function ch2script()
         b "Before we even make it to the door, Liam comes out to greet us."
     elseif ptr == 583 then
         updS('r', "13e", -1)
-        updL('a', "1b", 1)
+        updL('a', 1, 1)
         l "Finally you two made it!"
     elseif ptr == 584 then
         p "Yeah... She{w=.5} overslept."
@@ -368,7 +368,7 @@ function ch2script()
         updS('q', "13e")
         b "Sarah elbows me."
     elseif ptr == 586 then
-        updL('c', "1b")
+        updL('c', 1)
         l "Huh. And here I was thinking you were always energetic!"
     elseif ptr == 587 then
         updS('n', "2e")

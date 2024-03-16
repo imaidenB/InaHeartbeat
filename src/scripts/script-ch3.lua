@@ -220,7 +220,7 @@ function ch3script()
         b "That thought stays with me as I fall asleep."
     elseif ptr == 786 then
         b "This is a mostly permanent decision, kinda like a tattoo."
-    elseif ptr== 787 then
+    elseif ptr == 787 then
         b "I just want to be 1,000% sure I'm not fucking up my future."
     elseif ptr == 788 then
         wait(5)
