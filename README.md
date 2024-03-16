@@ -83,15 +83,15 @@ Arrows            | D-Pad      | Scroll history, menuing
 
 These buttons do nothing in any other context.
 
-> [!IMPORTANT]
+<!-- > [!IMPORTANT]
 > Playing on Android requires connecting a controller via Bluetooth or USB.
-> *In a Heartbeat* does **not** have touchscreen support.
+> *In a Heartbeat* does **not** have touchscreen support. -->
 
 # Key Info
 
 > [!IMPORTANT]
-<!-- > *In a Heartbeat* can only run on Windows, MacOS, Android, and 3DS. Sorry, Linux and iOS users! -->
 > *In a Heartbeat* can only run on Windows and MacOS. Sorry, everyone else!
+<!-- > *In a Heartbeat* can only run on Windows, MacOS, Android, and 3DS. Sorry, Linux and iOS users! -->
 
 Just like *Doki Doki Literature Club!*, *In a Heartbeat* isn't over until the credits are finished.
 
