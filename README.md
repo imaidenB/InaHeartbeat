@@ -147,9 +147,12 @@ Alternatively, you can download `iah.cia` from the "Releases" tab and transfer i
 
 # Credits
 <details> <summary>Spoilers ahead!</summary>
+Yeah the credits in-game are inaccurate, for ***immersion***.
+Here are the real ones:
 
 Role           | People
 ---------------|-------------------------------------------------------------------------
+Programming    | imaiden_B
 Writing        | imaiden_B, Hyruliam
 Art            | imaiden_B, Luka
 Music          | imaiden_B, Liquidream, C418, Junichi Masuda, Jonathan Coulton
