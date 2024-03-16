@@ -13,7 +13,7 @@ function loader_assets(l_timer)
         bgImg = blankImg
         background = "blank"
         p8sciiFont = lg.newImageFont("assets/fonts/p8scii.png","é !\"%&'()*,-./0123456789:>?abcdefghijklmnopqrstuvwxyz\\_`ABCDEFGHIJKLMNOPRSTUVWXYZ~✽½♥☉", 1)
-        mojanglesFont = lg.newImageFont("assets/fonts/mojangles.png"," \"'+,-./012379:<>?abcdefghijklmnopqrstuvwxyz_`ABCDEFGHIJLNORSTUWYZ", 1)
+        mojanglesFont = lg.newImageFont("assets/fonts/mojangles.png"," \"'+,-./012379:<>?abcdefghijklmnopqrstuvwxyz_`ABCDEFGHIJLNORSTUWYZ\\", 1)
         immediateFont = lg.newImageFont("assets/fonts/immediate.png","▮ #'(),./0123456789:=>?ceilmnps[]_ABCDEFGHIJKLMNOPRSTUWXY")
         menuFont = lg.newImageFont("assets/fonts/menu.png","▮▶□ -:abcdefghiklmnopqrstuvwy_")
         lg.setFont(p8sciiFont)
