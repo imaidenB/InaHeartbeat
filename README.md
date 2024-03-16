@@ -102,6 +102,7 @@ OS      | Location
 --------|---------------------------
 Windows | %appdata%\pico-8
 MacOS   | Application Support/pico-8
+Linux   | ~/.lexaloffle/pico-8
 
 > [!CAUTION]
 > I swear to zep, if this game turns you on, *shit will go down*.
