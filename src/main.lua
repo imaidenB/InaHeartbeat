@@ -150,7 +150,7 @@ function love.load()
 	paused = false
 	dlg_enabled = true -- Whether or not the dialogue box can be drawn.
 	history = {} -- The dialogue history
-	ver = 0.2 -- Development version
+	ver = "1.0" -- Development version
 
 	love.window.setTitle "InaHeartbeat" -- PICO-8 exported binaries use the cart title during boot
 
