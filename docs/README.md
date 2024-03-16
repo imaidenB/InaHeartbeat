@@ -35,49 +35,58 @@ Here is an example of a short Ren'P8-LOVE chapter:
 
 ```lua
 function ch0script()
-  if ptr==0 then
-    music"bell"
-    pause(5)
-  elseif ptr==1 then
-    b"The bell at Skyline High School has just rung, and I am taking my time with leaving."
-  elseif ptr==2 then
-    b"Unlike literally everyone else..."
-  elseif ptr==3 then
-    b"Sometimes I wonder if I'm the only one with any patience..."
-  elseif ptr==4 then
-    bg"skyline_ext"
-    updA('a','1','2')
-    a"Hey!"
-  elseif ptr==5 then
-    updA('b','2','2')
-    b"I see a guy older than me running up to me."
-  elseif ptr==6 then
-    b"He is Aiden, a 16-year-old senior who I've known for just over two years."
-  elseif ptr==7 then
-    b"We're not as much of friends as we were, say, a year ago, but we still regularly chat through Discord."
-  elseif ptr==8 then
-    p"What's up?"
-  elseif ptr==9 then
-    a"Are you gonna be online?"
-  elseif ptr==10 then
-    a"I really want to play on the server with you and Liam."
-  elseif ptr==11 then
-    a"There's something I want to build, and I'm gonna need help."
-  elseif ptr==12 then
-    b"Liam... Another freshman who I've known for longer than I can remember."
-  elseif ptr==13 then
-    b"I can't believe we're still friends to this day."
-  elseif ptr==14 then
-    p"I should be. I'll DM you when I'm free."
-  elseif ptr==15 then
-    updA('c','2','2')
-    a"Sweet! See you later, then."
-  elseif ptr==16 then
-    hideA()
-    p"Yeah..."
-  elseif ptr==17 then
-    b"What kind of monstrosity does he have planned this time?"
-  end
+    if ptr == 0 then
+        music "bell"
+        wait(5)
+    elseif ptr == 1 then
+        b "The dismissal bell has just rung, and I am taking my time leaving."
+    elseif ptr == 2 then
+        b "Unlike literally everyone else..."
+    elseif ptr == 3 then
+        b "Sometimes I wonder if I'm the only one with any patience..."
+    elseif ptr == 4 then
+        music "iah"
+        bg "school_ext"
+        updA('a', 1)
+        dlg("???", "Hey! Spencer!")
+    elseif ptr == 5 then
+        updA('a', 3)
+        b "A student shouts out to me."
+    elseif ptr == 6 then
+        b "He is Aiden, a 16-year-old senior who I've known for almost two years."
+    elseif ptr == 7 then
+        b "We aren't as much of friends as we were then, but we still regularly chat over Discord."
+    elseif ptr == 8 then
+        p "What's up?"
+    elseif ptr == 9 then
+        updA('c', 31)
+        a "Will you be online today?"
+    elseif ptr == 10 then
+        a "I really want to play on the server with you and Liam."
+    elseif ptr == 11 then
+        updA('c', 23)
+        a "There's something I want to build, and I'm gonna need help."
+    elseif ptr == 12 then
+        updA('a', 3)
+        b "Liam... Another freshman whom I've known for longer than I can remember."
+    elseif ptr == 13 then
+        b "I can't believe we're still friends after all of this time..."
+    elseif ptr == 14 then
+        p "I should be."
+    elseif ptr == 15 then
+        p "I'll DM you when I'm free."
+    elseif ptr == 16 then
+        updA('c', 2)
+        a "Sweet!"
+    elseif ptr == 17 then
+        updA('c', 12)
+        a "See you later!"
+    elseif ptr == 18 then
+        hideA()
+        p "Yeah."
+    elseif ptr == 19 then
+        b "What kind of monstrosity is Aiden planning now?"
+    end
 end
 ```
 </details>
