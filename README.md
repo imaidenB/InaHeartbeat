@@ -1,7 +1,6 @@
 A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after [PICO-8](https://www.lexaloffle.com/pico-8.php).
 
-<details>
-  <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
+<details> <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
   
   > TLDR: *In a Heartbeat* literally became too big for PICO-8, so I moved it into another game engine.
 
@@ -37,10 +36,10 @@ A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after
   
   So I scrapped it, and decided to "recreate" PICO-8 in LÖVE.
   
-  > This will make a bit more sense after you beat the game.
-  
   Canonically, *In a Heartbeat* runs in PICO-8. Again, the only reason it doesn't is because of the stupid character limit, and *In a Heartbeat* could *theoretically* run in PICO-8 just fine.
   I'm just too lazy to find out how to trim it down.
+  
+  > This will make a bit more sense after you beat the game.
   
   Besides, doing it in LÖVE made programming, debugging, and editing 1,000,000x easier.
   
@@ -72,7 +71,7 @@ A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after
 
 # Controls
 
-The controls are based off of PICO-8's default keybinds, with a few differences:
+The controls are PICO-8's default keybinds, with a few differences:
 
 Keyboard          | Controller | Action
 ------------------|------------|----------------------------------------
@@ -90,19 +89,20 @@ These buttons do nothing in any other context.
 # Key Info
 
 > [!IMPORTANT]
-> *In a Heartbeat* can only run on Windows and MacOS. Sorry, everyone else!
-<!-- > *In a Heartbeat* can only run on Windows, MacOS, Android, and 3DS. Sorry, Linux and iOS users! -->
+> *In a Heartbeat* can only run on Windows, MacOS, and Linux. Sorry, everyone else!
+<!-- > *In a Heartbeat* can only run on Windows, MacOS, Linux, Android, and 3DS. Sorry, Linux and iOS users! -->
 
 Just like *Doki Doki Literature Club!*, *In a Heartbeat* isn't over until the credits are finished.
 
 Files are stored in different locations depending on platform.
-Usually, it's the default PICO-8 directory, but it can vary.
+No matter the platform, though, they will be stored in the default PICO-8 directory:
+<!-- Usually, it's the default PICO-8 directory, but it can vary. -->
 
-OS      | Location
---------|---------------------------
-Windows | %appdata%\pico-8
-MacOS   | Application Support/pico-8
-Linux   | ~/.lexaloffle/pico-8
+Platform | Location
+---------|---------------------------
+Windows  | %appdata%\pico-8
+MacOS    | Application Support/pico-8
+Linux    | ~/.lexaloffle/pico-8
 
 > [!CAUTION]
 > I swear to zep, if this game turns you on, *shit will go down*.
@@ -114,17 +114,23 @@ Yes, apparently thumping isn't international.
 > That's what she said.
 
 This is where both *Doki Doki Literature Club!* and *In a Heartbeat* get their names.
-It is also why me and Dan Salvato much, much prefer saying "DDLC" instead of "Doki Doki."
+It is also why me and many other fans much, much prefer saying "DDLC" instead of "Doki Doki."
+It's just a *bit* less confusing that way.
 
 # Installation
-<!-- ## Windows/MacOS -->
+## Windows/MacOS
 Download the latest release of *In a Heartbeat* for your operating system from the "Releases" tab.
 
 Simply extract the `.zip` to a folder located somewhere accessible, like your Desktop.
   
 Then, run the `iah` application.
+## Linux
+Download the latest release of LÖVE from [the official website](https://love2d.org/).
+
+Then, download the latest release of *In a Heartbeat* as a `.love` file.
+
+Then, run `iah.love`.
 <!-- ## Android
-### Coming soon!
 Download `iah.apk` from the "Releases" tab.
 
 Run it to install the game as an app.
@@ -132,7 +138,6 @@ Run it to install the game as an app.
 > [!IMPORTANT]
 > As *In a Heartbeat* is not from Google Play, you may need to grant permission for the `.apk` to install.
 ## 3DS
-### Coming soon!
 > [!IMPORTANT]
 > Installing *In a Heartbeat* on a 3DS requires Luma3DS. For more information, visit [3DS Hacks Guide](https://3ds.hacks.guide).
 
