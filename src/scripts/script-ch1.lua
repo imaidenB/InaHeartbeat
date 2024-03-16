@@ -290,7 +290,7 @@ function ch1script()
         ma "o/"
     elseif ptr == 338 then
         -- mp(chat="<engineer723> "..chat)
-        mp "o/"
+        mp "\\o"
     elseif ptr == 339 then
         mp "woah"
     elseif ptr == 340 then
