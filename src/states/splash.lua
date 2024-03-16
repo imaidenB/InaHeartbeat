@@ -7,10 +7,11 @@ local splashbox = text.new("center", {
 splashx = 975
 
 local basedirs={
-    -- ["3DS"] ="3ds/data/lovepotion/InaHeartbeat",
-    -- Android ="Android/data/org.love2d.android",
-    ["OS X"]="Library/Application Support/pico-8",
-    Windows ="%appdata%\\pico-8"
+    -- ["3DS"] = "3ds/data/lovepotion/InaHeartbeat",
+    -- Android = "Android/data/org.love2d.android",
+    ["OS X"]= "Library/Application Support/pico-8",
+    Windows = "%appdata%\\pico-8",
+	Linux = "~/.lexaloffle/pico-8"
 }
 -- local horizon_splash = (g_system == "3DS" and "3DS > Switch" or "Who the fuck would even play this on a 3DS?")
 local splashes = {
