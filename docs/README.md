@@ -1,3 +1,5 @@
+# **Super work in progress! Do not read!**
+
 # *In a Heartbeat* Mod Guide
 This acts as a guide on creating visual novels using Ren'P8-LOVE, a modified version of DDLC-LOVE's engine.
 
