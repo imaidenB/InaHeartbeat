@@ -56,7 +56,7 @@ function ch0script()
         p "Huh?"
     elseif ptr == 22 then
         music "ss"
-        updS('a', 31)
+        updS('e', 31)
         b "The door opens, and a tired-looking girl about my age runs out, carrying a few papers in her hand."
     elseif ptr == 23 then
         b "That girl is Sarah, one of the students I share Advisory with."
@@ -75,7 +75,7 @@ function ch0script()
     elseif ptr == 28 then
         p "Oh... What's up? I kinda have to hurry."
     elseif ptr == 29 then
-        updS('e', 31)
+        updS('g', 31)
         s "Um... Thank you{w=.25} again{w=.25} for what you did earlier."
     elseif ptr == 30 then
         p "Yeah. You're welcome."
@@ -159,7 +159,7 @@ function ch0script()
     elseif ptr == 64 then
         p "Ah!{w=1} {b}Sarah!{/b}"
     elseif ptr == 65 then
-        p "You didn't give me your street number,{w=.25} {b}schweinehund{/b}!"
+        p "You never gave me your actual address,{w=.25} {b}schweinehund{/b}!"
     elseif ptr == 66 then
         updS('e', 1)
         s "Oops...{w=.5} Sorry~!"

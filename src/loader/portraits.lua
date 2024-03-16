@@ -77,7 +77,7 @@ function unloadAll() unloadA() unloadS() unloadL() end
 ---@param b string|integer The body to use.
 ---@param h string? The head or action pose to use.
 ---@param x integer? The X position to place the portrait. -1 = left, 0 = middle, 1 = right. Defaults to 0.
-local function updPt(set, b, h, x)
+local function updPt(set, h, b, x)
     set.visible = true
     set.b = b
     set.h = h or ''
@@ -89,25 +89,25 @@ end
 ---@param b string|integer The body to use. If nil, uses Aiden's previous body.
 ---@param x integer? The X position to place Sarah. 0 = left, 1 = middle, 2 = right. Defaults to 1.
 function updA(h, b, x)
-    updPt(a_Set, b, h, x)
+    updPt(a_Set, h, b, x)
     if xaload == 0 then loadA() end
 end
 ---Update Sarah's portrait.
 ---
----@param h string|integer? The head or action pose to use.
+---@param h string The head or action pose to use.
 ---@param b string|integer The body to use. If nil, uses Sarah's previous body.
 ---@param x integer? The X position to place Sarah. 0 = left, 1 = middle, 2 = right. Defaults to 1.
 function updS(h, b, x)
-    updPt(s_Set, b, h, x)
+    updPt(s_Set, h, b, x)
     if xaload == 0 then loadS() end
 end
 ---Update Liam's portrait.
 ---
----@param h string|integer? The head or action pose to use.
+---@param h string The head or action pose to use.
 ---@param b string|integer The body to use. If nil, uses Liam's previous body.
 ---@param x integer? The X position to place Sarah. 0 = left, 1 = middle, 2 = right. Defaults to 1.
 function updL(h, b, x)
-    updPt(l_Set, b, h, x)
+    updPt(l_Set, h, b, x)
     if xaload == 0 then loadL() end
 end
 

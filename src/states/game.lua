@@ -10,7 +10,7 @@ function game_draw()
 	lg.setCol(1, 1, 1)
 	-- If there's currently a background, draw it with peachy:draw if we're in a CG, or lg.draw if not.
 	if background:sub(1, 3) == "cg/" then
-		if bgImg ~= blankPeachy then bgImg:draw() end
+		if bgImg ~= blankPeachy and bgImg.draw then bgImg:draw() end
 	elseif bgImg ~= blankImg and not bgImg.draw then lg.draw(bgImg, 0, immediate_y or 0)
 	end
 	drawAll() -- Draw all portraits.
@@ -23,8 +23,6 @@ function game_draw()
 	
 	lg.setFont(p8sciiFont) -- Make certain we're using the correct font.
 	lg.setCol(1, 1, 1) -- (1, 1, 1) is pure white, which makes sure drawing operations don't have a tint.
-	-- If we're in test mode, print the current ptr at the top of the screen.
-	if test then lg.oprint(ptr, 64 - string.len(ptr)*2, dlgTop and 122 or 1, 7, 0) end
 	if autotimer > 0 then -- If we're auto-forwarding, let the player know with a box with text.
 		lg.rect("fill", 0, 0, 50, 7, 6)
 		lg.oprint("Auto-Forward", 1, 1, 0)
