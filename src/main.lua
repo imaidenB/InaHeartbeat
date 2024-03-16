@@ -1,16 +1,16 @@
 -- In a Heartbeat
 -- by imaiden_B
 
--- Engine adapted from https://www.github.com/LukeZGD/DDLC-LOVE
--- Palette, P8SCII font, music composure, and boot & cartswap animations from https://lexaloffle.com/pico-8.php
--- Mojangles font from https://www.minecraft.net
+-- Engine adapted from DDLC-LOVE https://www.github.com/LukeZGD/DDLC-LOVE
+-- Palette, P8SCII font, music composition, and boot & cartswap animations from PICO-8 https://lexaloffle.com/pico-8.php
+-- Mojangles font from Minecraft https://www.minecraft.net
 
 -- Third-party music used:
 --- C418 - Sweden
 --- Junichi Masuda - Lavender Town
 --- Jonathan Coulton - Still Alive
 
--- Still Alive cover and visuals by https://www.lexaloffle.com/bbs/?uid=13822
+-- Still Alive cover and visuals by Liquidream https://www.lexaloffle.com/bbs/?uid=13822
 -- All other music made/covered by imaiden_B
 
 --[[
@@ -29,7 +29,7 @@ test = false
 
 ---The operating system running the game.
 ---Used for file saving and platform-specific features.
----@type "Windows"|"OS X"|"Android"|"3DS"
+---@type "Windows"|"OS X"|"Linux"|"Android"|"3DS"
 g_system = love._console_name or love.system.getOS()
 
 -- Make sure that random is random.
@@ -83,7 +83,8 @@ text.configure.image_table { -- Allow inline images inside of text boxes. Used t
 -- Use either love.filesystem or nativefs for reading and writing files, depending on the operating system.
 -- 3DS uses sdmc:/3ds/data/LovePotion/InaHeartbeat.
 -- Android uses Android/data/org.love2d.android/files/save/InaHeartbeat.
--- MacOS/OS X uses Application Support/pico-8.
+-- Linux uses ~/.lexaloffle/pico-8.
+-- MacOS uses Application Support/pico-8.
 -- Windows uses %appdata%\pico-8.
 if g_system == "3DS" or g_system == "Android" then
 	write = love.filesystem.write
@@ -95,7 +96,12 @@ if g_system == "3DS" or g_system == "Android" then
 	p8Dir = ''
 else
 	nativefs = require "lib/nativefs"
-	nativefs.setWorkingDirectory(love.filesystem.getAppdataDirectory().."/pico-8")
+	-- Compatibility for the rare case of a Linux user playing with the .love file
+	if g_system == "Linux" then
+		nativefs.setWorkingDirectory(love.filesystem.getUserDirectory().."/.lexaloffle/pico-8")
+	else
+		nativefs.setWorkingDirectory(love.filesystem.getAppdataDirectory().."/pico-8")
+	end
 	write = nativefs.write
 	read = nativefs.read
 	createDirectory = nativefs.createDirectory
