@@ -72,12 +72,12 @@ A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after
 
 # Controls
 
-The controls are fairly similar to the demo, with a few changes:
+The controls are based off of PICO-8's default keybinds, with a few differences:
 
 Keyboard          | Controller | Action
-------------------|------------|------------------------------------
+------------------|------------|----------------------------------------
 Space/X/V/M       | A/Y        | Dismiss dialogue, select menu item
-H/Backspace/Z/C/N | B/X        | Toggle UI visibility
+H/Backspace/Z/C/N | B/X        | Toggle UI visibility, close PICO-8 menu
 Esc/P/Enter       | Start      | Open PICO-8 menu
 Arrows            | D-Pad      | Scroll history, menuing
 
