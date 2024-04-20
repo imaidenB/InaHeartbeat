@@ -139,7 +139,7 @@ function ch0script()
     elseif ptr == 56 then
         b "She says that it's fine, as long as I'm back by 8:00."
     elseif ptr == 57 then
-        b "I agree, and make my way down ***REMOVED***."
+        b "I agree, and make my way down the street."
     elseif ptr == 58 then
         wait(.75)
         dlg_enabled = false
@@ -543,7 +543,7 @@ function ch0script()
         music "aad"
         dlg("Sarah & mom", "Bye~!")
     elseif ptr == 219 then
-        b "I hurry down ***REMOVED***."
+        b "I hurry up the street."
     elseif ptr == 220 then
         b "As I do, I pull my phone out of my pocket to call Mom."
     elseif ptr == 221 then
