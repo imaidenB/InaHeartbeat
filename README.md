@@ -1,6 +1,6 @@
 A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after [PICO-8](https://www.lexaloffle.com/pico-8.php).
 
-<details> <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
+<!-- <details> <summary>See also: Sleep-Deprived Programmer Ramblings</summary>
   
   > TLDR: *In a Heartbeat* literally became too big for PICO-8, so I moved it into another game engine.
 
@@ -65,7 +65,7 @@ A visual novel/dating sim built in [LÖVE](https://love2d.org/) and styled after
   So technically, *In a Heartbeat* is a *Doki Doki Literature Club!* mod. Only, it's coded in Lua instead of Ren'Py.
   > I really should've gone with Ren'Py from the start...
   
-</details>
+</details> -->
 
 ---
 
@@ -102,9 +102,15 @@ Platform | Location
 ---------|---------------------------
 Windows  | %appdata%\pico-8
 MacOS    | Application Support/pico-8
-Linux    | ~/.lexaloffle/pico-8
+Linux    | ~/.local/share/love/InaHeartbeat
 
 > [!CAUTION]
+> The MacOS version is ***extremely*** scuffed rn, the `.app` won't run, and the `.love` can't save for some reason.
+>
+> nativefs should work on MacOS...
+---
+
+<!-- > [!CAUTION]
 > I swear to zep, if this game turns you on, *shit will go down*.
 
 ---
@@ -115,7 +121,7 @@ Yes, apparently thumping isn't international.
 
 This is where both *Doki Doki Literature Club!* and *In a Heartbeat* get their names.
 It is also why me and many other fans much, much prefer saying "DDLC" instead of "Doki Doki."
-It's just a *bit* less confusing that way.
+It's just a *bit* less confusing that way. -->
 
 # Installation
 ## Windows/MacOS
